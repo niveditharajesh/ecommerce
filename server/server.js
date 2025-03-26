@@ -2,7 +2,6 @@
 ).then( ()=>console.log('MongoDB connected') ).catch((error) => console.log(error));
 */
 
-
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
@@ -19,7 +18,6 @@ const shopSearchRouter = require("./routes/shop/search-routes");
 const shopReviewRouter = require("./routes/shop/review-routes");
 
 const commonFeatureRouter = require("./routes/common/feature-routes");
-
 
 mongoose.connect('mongodb+srv://fathimajinshabp:AJaynYic8jyTNXJj@cluster0.ejidr.mongodb.net/'
 ).then( ()=>console.log('MongoDB connected') ).catch((error) => console.log(error));
