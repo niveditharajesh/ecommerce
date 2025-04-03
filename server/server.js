@@ -26,6 +26,8 @@ mongoose.connect('mongodb+srv://fathimajinshabp:AJaynYic8jyTNXJj@cluster0.ejidr.
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
+
 app.use(
   cors({
     origin: "http://localhost:5173",
