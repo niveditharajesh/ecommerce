@@ -114,6 +114,12 @@ export const shoppingViewHeaderMenuItems = [
     label: "Search",
     path: "/shop/search",
   },
+  {
+    id: "try-on",
+    label: "Try On",
+    path: "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+    external: true, // Optional: use this if you handle external links differently in your component
+  },
 ];
 
 export const categoryOptionsMap = {

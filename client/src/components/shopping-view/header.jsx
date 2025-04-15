@@ -30,6 +30,12 @@ function MenuItems() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   function handleNavigate(getCurrentMenuItem) {
+
+    // Check for external link first
+  if (getCurrentMenuItem.external) {
+    window.open(getCurrentMenuItem.path, "_blank", "noopener,noreferrer");
+    return; // stop here to prevent the rest of the function from running
+  }
     sessionStorage.removeItem("filters");
     const currentFilter =
       getCurrentMenuItem.id !== "home" &&
