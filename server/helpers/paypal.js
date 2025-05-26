@@ -2,8 +2,8 @@ const paypal = require("paypal-rest-sdk");
 
 paypal.configure({
   mode: "sandbox",
-  client_id: "ASQjcxB1cor6e1gPSYDqUiEJn8JjGudASgXoiPmjQGwjLsW6gnod-hiiMuXhMMqtfjlGyLpJiswDAk60",
-  client_secret: "EN8pw8EB7LC8RZEEmHGF64ILoFpRe5jwJuN6J4OjZHTbep4ZehQvFZueHU2clxGgAmgh62vkXVKsxSc-",
+  client_id: process.env.PAYPAL_CLIENT_ID,
+  client_secret: process.env.PAYPAL_SECRET_KEY ,
 });
 
 module.exports = paypal;

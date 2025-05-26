@@ -1,6 +1,7 @@
-/*mongoose.connect('mongodb+srv://fathimajinshabp:AJaynYic8jyTNXJj@cluster0.ejidr.mongodb.net/'
-).then( ()=>console.log('MongoDB connected') ).catch((error) => console.log(error));
-*/
+
+
+require('dotenv').config(); 
+
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -19,8 +20,7 @@ const shopReviewRouter = require("./routes/shop/review-routes");
 
 const commonFeatureRouter = require("./routes/common/feature-routes");
 
-mongoose.connect('mongodb+srv://fathimajinshabp:AJaynYic8jyTNXJj@cluster0.ejidr.mongodb.net/'
-).then( ()=>console.log('MongoDB connected') ).catch((error) => console.log(error));
+mongoose.connect(process.env.MONGODB_URI).then( ()=>console.log('MongoDB connected') ).catch((error) => console.log(error));
 
 
 const app = express();
